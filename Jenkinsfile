@@ -1,7 +1,7 @@
 
 node {
   stage('SCM') {
-    git ''
+    git 'https://github.com/MiralDonda/github-maven-example.git'
     }
   stage('SonarQube analysis') {
     withSonarQubeEnv(credentialsId: 'sonar', installationName: 'sonar_server') { // You can override the credential to be used
